@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+	<div id="balls"></div>
+	<button type="button" id="updateButton1">Update 1</button>
+	<button type="button" id="updateButton2">Update 2</button>
+	<button type="button" id="inputButton">Get Input</button>
+	<button type="button" id="videoButton">Get Video</button>
+	
+	<!-- BEGIN WELCOME PANEL -->
+
+	<section id="welcome">
+	  <p>Welcome to NuffyMate - A cricket nuffy's best mate.</p>
+	  <p>Please select an option</p>
+	  <div id="welcome-buttons">
+		<button type="button" id="welcome-select">Get game data from cricket.com.au</button>
+		<button type="button" id="welcome-manual">Manually enter a URL or series & match ID numbers</button>
+		<button type="button" id="welcome-debug">Load saved data for debugging purposes</button>
+	  </div>
+	</section>
+
+	<!-- END WELCOME PANEL -->
+	<!-- BEGIN INPUT PANEL -->
+	
+	<section id="input">
+	  <p>Enter either:</p>
+	  <label for="input-url">A cricket.com.au match URL</label><br />
+	  <input type="url" name="url" id="input-url" placeholder="eg: https://cricket.com.au/match/2194/43776/scorecard" />
+	  <p>OR</p>
+	  <div id="input-flex">
+		<div>
+		  <label for="input-series-id">Series ID</label><br />
+		  <input name="series-id" id="input-series-id" type="number" placeholder="eg: 2194" />
+		</div>
+		<div>&</div>
+		<div>
+		  <label for="input-match-id">Match ID</label><br />
+		  <input name="match-id" id="input-match-id" type="number" placeholder="eg: 43776" />
+		</div>
+	  </div>
+	  <button type="button" id="input-submit">Submit</button>
+	  <button type="button" id="input-clear">Clear</button>
+	  <button type="button" id="input-cancel">Cancel</button>	  
+	</section>
+
+	<!-- END INPUT PANEL -->
+	<!-- BEGIN MESSAGES PANEL -->
+
+	<section id="messages">
+	  <p id="message-header"></p>
+	  <p id="message-body"></p>
+	  <div id="message-buttons">
+		<button type="button" id="message-dismiss">Dismiss</button>
+		<button type="button" id="message-clipboard">Send to clipboard</button>
+	  </div>
+	</section>
+	
+	<!-- END MESSAGES PANEL -->	
+	<!-- BEGIN VIDEO PANEL -->
+
+	<section id="video">
+	  <div id="video-listening">
+		<p>NuffyMate is now listening for video streams.</p>
+		<p>Please note, the video stream must be playing in the browser for this to work.</p>
+		<p>You can click the button below to open the match page in a new tab.</p>
+		<button type="button" id="video-open-tab">Open Match Tab</button>
+		<button type="button" id="video-quit">Give Up</button>
+	  </div>
+	  <div id="video-found">
+		<p>NuffyMate found the following URL:</p>
+		<p id="video-url"></p>
+		<button type="button" id="video-clipboard">Copy To Clipboard</button>
+		<button type="button" id="video-try-again">Try Again</button>
+	  </div>
+	</section>
+	
+	<!-- END VIDEO PANEL -->	
+
+  </body>
+  <script src="main.js"></script>
+</html>

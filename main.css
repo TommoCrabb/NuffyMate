@@ -1,0 +1,164 @@
+body {
+	color: white;
+	background-color: dimgrey;
+	font-weight: bold;
+	font-family: sans-serif;
+	margin: 0;
+}
+
+a {
+	color: #AFF;
+}
+
+#balls {
+	background-color: black;
+	margin: 5px;
+	overflow: scroll;
+	height: 500px;
+	width: 300px;
+}
+
+.over {
+	background-color: dimgrey;
+	border-radius: 0em;
+	margin: 2px;
+}
+
+.over-header, .over-balls {
+	display: flex;
+	flex-direction: row;
+}
+
+.over-header div {
+	padding: 0 5px;
+}
+
+.over-number {
+	background-color: black;
+}
+
+.bowler {
+	background-color: #404;
+}
+
+.over-balls div {
+	width: 1.5em;
+	text-align: center;
+	background-color: white;
+	color: black;
+	margin-right: 2px;
+	border-radius: 1em;
+}
+
+.over-balls .Bye {
+	background-color: palegreen;
+}
+
+.over-balls .LegBye {
+	background-color: cyan;
+}
+
+.over-balls .Wide {
+	background-color: yellow;
+}
+
+
+.over-balls .NoBall {
+	background-color: lightpink;
+}
+
+.over-balls .Bye, .over-balls .LegBye, .over-balls .Wide, .over-balls .NoBall {
+	border-radius: 1em;
+}
+
+.over-balls .dot {
+	color: white;
+	background-color: inherit;
+}
+
+.over-balls .wicket {
+	color: white;
+	background-color: maroon;
+}
+
+/* BEGIN PANEL SECTION */
+
+#input #video {
+	z-index: 100;
+}
+
+#welcome {
+	z-index: 50;
+}
+
+#messages {
+	z-index: 900;
+}
+
+#input, #messages, #video {
+	display: none;
+}
+
+#input, #welcome, #messages, #video {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	text-transform: uppercase;
+	background-color: inherit;
+}
+
+#message-body, #video-url {
+	text-transform: none;
+}
+
+/* END PANEL SECTION */
+
+/* BEGIN WELCOME SECTION */
+
+#welcome-buttons button, #message-buttons button {
+	width: 40em;
+	margin: .5em;
+}
+
+#welcome-buttons, #message-buttons {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* END WELCOME SECTION */
+
+/* BEGIN INPUT SECTION */
+
+#input-flex {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+#input-flex div {
+	margin: 1em;
+}
+
+#input input[type="url"] {
+	width: 60em;
+}
+
+#input button {
+	width: 7em;
+}
+
+/* END INPUT SECTION */
+
+/* BEGIN VIDEO SECTION */
+
+/*
+#videoButton, #video-clipboard, #video-try-again {
+	display: none;
+}
+*/
+	
